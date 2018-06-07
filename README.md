@@ -15,12 +15,30 @@ Or set in composer.json
     }
 ```
 
+## Register Dependencies
+
+Set configuration in `config/app.php`
+
+```    
+    // Set providers.
+    'providers' => [
+        processdrive\rap\RAPServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+    ]
+
+    // Set aliases
+    'aliases' => [
+        'Form' => 'Collective\Html\FormFacade',
+        'Html' => 'Collective\Html\HtmlFacade',
+        'RAPHelper' => \processdrive\rap\Helpers\RAPHelper::class,
+    ],
+```
+
 ## Publish the package
 
 ```
     php artisan vendor:publish --all
 ```
-
 
 ## Configuration
 
@@ -52,24 +70,7 @@ Set configuration in `config/rap/rap_config.php`
     ];
 ```
 
-## Register Dependencies
 
-Set configuration in `config/app.php`
-
-```    
-    // Set providers.
-    'providers' => [
-        processdrive\rap\RAPServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-    ]
-
-    // Set aliases
-    'aliases' => [
-        'Form' => 'Collective\Html\FormFacade',
-        'Html' => 'Collective\Html\HtmlFacade',
-        'RAPHelper' => \processdrive\rap\Helpers\RAPHelper::class,
-    ],
-```
 
 ## Run command
 
