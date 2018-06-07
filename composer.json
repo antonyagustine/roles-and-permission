@@ -1,0 +1,43 @@
+{
+    "name": "processdrive/rap",
+    "description": "Laravel roles and permission simple package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Agustine",
+            "email": "agustine@processdrive.com"
+        },
+        {
+            "name": "Jai",
+            "email": "jai@processdrive.com"
+        },
+        {
+            "name": "ProcessDrive",
+            "email": "php@processdrive.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "processdrive\\rap\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^5.6.4 || ^7.0",
+        "laravel/framework": "~5.4",
+        "illuminate/support": ">=4.2.0",
+        "laravelcollective/html": "~5.0",
+        "yajra/laravel-datatables-oracle":"~8.0",
+        "yajra/laravel-datatables-buttons": "^3.0",
+        "laracasts/flash": "^3.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "processdrive\\rap\\RAPServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+#menu {
+    font-size: 25px;
+}
+
+.select2-container--default .select2-selection--multiple {
+    border-radius: 2px !important;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.module_name {
+    text-align: center !important;
+    font-size: 15px !important;
+    background: cadetblue !important;
+}
+
+.container {
+    width: auto !important;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.right-addon input { padding-right: 30px; }
