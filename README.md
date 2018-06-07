@@ -33,7 +33,7 @@ Set configuration in `config/rap/rap_config.php`
         'use_package_routes' => true,
 
         // Set middlewares
-        'middlewares' => ['auth'],
+        'middlewares' => ['auth', 'CheckRole'],
 
         // Set Static Action
         'static_action' => [
@@ -97,7 +97,7 @@ Add Route in `routes/web.php`
     Route::group(['middleware' => 'CheckRole'], function () {
         //add routes which are going to validate by RAP.
     });
-    
+
     RAPHelper::routes();
 ```
 
@@ -121,7 +121,9 @@ register in your app/Http/kernal.php
 ## Usage
 
 ```
-    Create Role using left menue role option
+    @hasPermission("viewSettings")
+        // your code
+    @endHasPermission
 ```
 
     
