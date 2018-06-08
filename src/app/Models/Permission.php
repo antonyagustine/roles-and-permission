@@ -47,6 +47,23 @@ class Permission extends Model
      * @return [array]
      */
     public function getDataForIndex($search)  {
-        return DB::table('modules')->where("name", "LIKE", "%{$search}%")->paginate(10);
+        $trans = include resource_path('lang/en/rap_modules.php');
+        $query = DB::table('modules');
+        $st = false;
+
+        if (@$search) {
+            foreach ($trans as $key => $value) {
+                if (strpos(strtolower($value), strtolower($search)) !== false) {
+                    if (!$st) {
+                        $query->whereName($key);    
+                        $st = true;
+                    } else {
+                        $query->orWhere("name", '=', $key);    
+                    }
+                }
+            }
+        }
+        
+        return $query->paginate(10);
     }
 }

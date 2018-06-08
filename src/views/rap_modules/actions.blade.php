@@ -7,6 +7,7 @@
     <div class="box box-primary">
         <div class="box-body">
             @php
+                $button_back = '<a href='.route("rap", "rapModules.index").' class="btn btn-info">'.trans("roles.back").'</a>';
                 $button = '<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#action-fields">'.trans("roles.add_new").'</button>';
             @endphp
 			

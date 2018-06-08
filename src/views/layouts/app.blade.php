@@ -26,7 +26,7 @@
                                     <a href="#" class="glyphicon glyphicon-th-list dropdown-toggle" id="menu" data-toggle="dropdown"></a>
                                     <ul class="dropdown-menu navbar-left">
                                         <li><a href="{{ route('rap', 'roles.index') }}">Roles</a></li>
-                                        <li><a onclick="" href="{{ route('rap', 'rapModules.index') }}">Modules</a></li>
+                                        <li><a href="{{ route('rap', 'rapModules.index') }}">Modules</a></li>
                                     </ul>
                                 </li>
                             </ul>

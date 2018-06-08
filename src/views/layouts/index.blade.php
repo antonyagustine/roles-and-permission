@@ -6,7 +6,8 @@
 			@if (@$route)
 				<a href="{!! $route !!}" class="btn btn-primary" id="add_new">{!! trans('roles.add_new') !!}</a>
 			@endif
-			@if (@$button)
+			@if (@$button && @$button_back)
+				{!! $button_back !!}
 				{!! $button !!}
 			@endif
 		</div>

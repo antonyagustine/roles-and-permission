@@ -1,13 +1,12 @@
 @extends('rap::layouts.app', ['title' => 'Assign Roles And Permission', 'module' => 'roles'])
 
 @section('content')
-        @include('flash::message')
-
         <div class="box box-primary">
             <div class="box-body">
                 <div class="alert alert-success" id="alert" role="alert" style="display: none;">
                     {{ trans('roles.success_msg') }}
                 </div>
+                
                 <div class="form-group">
                     <a href="{!! url()->previous() !!}" class="btn btn-info">Back</a>
                 </div>
