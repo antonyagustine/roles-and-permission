@@ -6,13 +6,13 @@ A simple package to assign RAP(Roles And Permission) for an application.
 
 Via composer
 ```
-    composer require "processdrive/rap":"dev-master"
+composer require "processdrive/rap":"dev-master"
 ```
 Or set in composer.json
 ```
-    "require": {
-        "processdrive/rap":"dev-master"
-    }
+"require": {
+    "processdrive/rap":"dev-master"
+}
 ```
 
 ## Register Dependencies
@@ -20,24 +20,24 @@ Or set in composer.json
 Set configuration in `config/app.php`
 
 ```    
-    // Set providers.
-    'providers' => [
-        processdrive\rap\RAPServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-    ]
+// Set providers.
+'providers' => [
+    processdrive\rap\RAPServiceProvider::class,
+    Collective\Html\HtmlServiceProvider::class,
+]
 
-    // Set aliases
-    'aliases' => [
-        'Form' => 'Collective\Html\FormFacade',
-        'Html' => 'Collective\Html\HtmlFacade',
-        'RAPHelper' => \processdrive\rap\Helpers\RAPHelper::class,
-    ],
+// Set aliases
+'aliases' => [
+    'Form' => 'Collective\Html\FormFacade',
+    'Html' => 'Collective\Html\HtmlFacade',
+    'RAPHelper' => \processdrive\rap\Helpers\RAPHelper::class,
+],
 ```
 
 ## Publish the package
 
 ```
-    php artisan vendor:publish --all
+php artisan vendor:publish --all
 ```
 
 ## Configuration
@@ -45,29 +45,29 @@ Set configuration in `config/app.php`
 Set configuration in `config/rap/rap_config.php`
 
 ```
-    return [
-        
-        // Set Route access enable or disable
-        'use_package_routes' => true,
+return [
+    
+    // Set Route access enable or disable
+    'use_package_routes' => true,
 
-        // Set middlewares
-        'middlewares' => ['auth', 'CheckRole'],
+    // Set middlewares
+    'middlewares' => ['auth', 'CheckRole'],
 
-        // Set Static Action
-        'static_action' => [
-            'index' => 'List', 
-            'create' => 'Create', 
-            'show' => 'Show', 
-            'edit' => 'Edit', 
-            'destroy' => 'Destroy', 
-            'store' => 'Store', 
-            'update' => 'Update', 
-            'delete' => 'Delete'
-        ],
+    // Set Static Action
+    'static_action' => [
+        'index' => 'List', 
+        'create' => 'Create', 
+        'show' => 'Show', 
+        'edit' => 'Edit', 
+        'destroy' => 'Destroy', 
+        'store' => 'Store', 
+        'update' => 'Update', 
+        'delete' => 'Delete'
+    ],
 
-        //Set Omit Action it will be womited from permission module.
-        'omit_action' => []
-    ];
+    //Set Omit Action it will be womited from permission module.
+    'omit_action' => []
+];
 ```
 
 
@@ -75,19 +75,19 @@ Set configuration in `config/rap/rap_config.php`
 ## Run command
 
 ``` 
-    composer dump-autoload
+composer dump-autoload
 ```
 
 ## Run migration
 
 ```
-    php artisan migrate
+php artisan migrate
 ```
 
 ## Generate translation and db seed
 
 ```
-    php artisan rap_generate:translation
+php artisan rap_generate:translation
 ```
 
 ## Add Route
@@ -95,11 +95,11 @@ Set configuration in `config/rap/rap_config.php`
 Add Route in `routes/web.php`
     
 ```
-    Route::group(['middleware' => 'CheckRole'], function () {
-        //add routes which are going to validate by RAP.
-    });
+Route::group(['middleware' => 'CheckRole'], function () {
+    //add routes which are going to validate by RAP.
+});
 
-    RAPHelper::routes();
+RAPHelper::routes();
 ```
 
 ## Add ifream in your application
@@ -107,24 +107,24 @@ Add Route in `routes/web.php`
 Add ifream in your application
 
 ```
-    <iframe src="{{ route('rap', 'roles.index') }}" width="100%" height="100%" style=" border: 0;"></iframe>
+<iframe src="{{ route('rap', 'roles.index') }}" width="100%" height="100%" style=" border: 0;"></iframe>
 ```
 
 ## Register Middelware
 
-register in your app/Http/kernal.php
+register in your `app/Http/kernel.php`
 
 ```
-    protected $routeMiddleware = [
-        'CheckRole' => processdrive\rap\Middleware\CheckRole::class,
-    ];     
+protected $routeMiddleware = [
+    'CheckRole' => processdrive\rap\Middleware\CheckRole::class,
+];     
 ```
 ## Usage
 
 ```
-    @hasPermission("viewSettings")
-        // your code
-    @endHasPermission
+@hasPermission("viewSettings")
+    // your code
+@endHasPermission
 ```
 
     
