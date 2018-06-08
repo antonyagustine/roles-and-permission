@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Models;
+namespace processdrive\rap\app\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
@@ -16,7 +16,7 @@ class Permission extends Model
      * @return [type]
      */
 	public function roles() {
-        return $this->belongsToMany("processdrive\\rap\Models\Role","role_permission", "role_id", "permission_id");
+        return $this->belongsToMany("processdrive\\rap\app\Models\Role","role_permission", "role_id", "permission_id");
     }
 
     /**
@@ -24,7 +24,7 @@ class Permission extends Model
      * @return [type]
      */
     public function rap_modules() {
-        return $this->belongsTo("processdrive\\rap\Models\\rap_modules","id", "module_id");
+        return $this->belongsTo("processdrive\\rap\app\Models\\rap_modules","id", "module_id");
     }
 
     /**

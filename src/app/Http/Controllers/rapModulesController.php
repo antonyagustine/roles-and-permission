@@ -1,8 +1,8 @@
 <?php
 
-namespace processdrive\rap\Http\Controllers;
+namespace processdrive\rap\app\Http\Controllers;
 
-use processdrive\rap\Models\Permission;
+use \processdrive\rap\app\Models\Permission;
 use \App\Http\Controllers\Controller;
 
 class rapModulesController extends Controller

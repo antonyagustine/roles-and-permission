@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Models;
+namespace processdrive\rap\app\Models;
 
 use Eloquent as Models;
 use Illuminate\Database\Eloquent\SoftDeletes;

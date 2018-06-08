@@ -22,15 +22,15 @@ Set configuration in `config/app.php`
 ```    
 // Set providers.
 'providers' => [
-    processdrive\rap\RAPServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
+    processdrive\rap\RAPServiceProvider::class,
 ]
 
 // Set aliases
 'aliases' => [
     'Form' => 'Collective\Html\FormFacade',
     'Html' => 'Collective\Html\HtmlFacade',
-    'RAPHelper' => \processdrive\rap\Helpers\RAPHelper::class,
+    'RAPHelper' => processdrive\rap\app\Helpers\RAPHelper::class,
 ],
 ```
 
@@ -116,7 +116,7 @@ register in your `app/Http/kernel.php`
 
 ```
 protected $routeMiddleware = [
-    'CheckRole' => processdrive\rap\Middleware\CheckRole::class,
+    'CheckRole' => processdrive\rap\app\Http\Middleware\CheckRole::class,
 ];     
 ```
 ## Usage

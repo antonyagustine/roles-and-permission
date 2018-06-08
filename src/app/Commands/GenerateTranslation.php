@@ -37,7 +37,7 @@ class GenerateTranslation extends Command
      */
     public function handle()
     {
-        $role = new \processdrive\rap\Models\GetRoutes();
+        $role = new \processdrive\rap\app\Models\GetRoutes();
         $role->createTransFiles();
         echo "\033[32m Translation is created Successfully! \033[0m".PHP_EOL;
     }

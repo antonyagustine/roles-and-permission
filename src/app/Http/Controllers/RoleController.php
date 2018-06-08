@@ -1,11 +1,11 @@
 <?php
 
-namespace processdrive\rap\Http\Controllers;
+namespace processdrive\rap\app\Http\Controllers;
 
 use \App\Http\Controllers\AppBaseController;
-use processdrive\rap\Helpers\RAPHelper;
+use \processdrive\rap\app\Helpers\RAPHelper;
 use \App\Http\Controllers\Controller;
-use \processdrive\rap\Models\Role;
+use \processdrive\rap\app\Models\Role;
 
 class RoleController extends Controller
 {
@@ -154,7 +154,7 @@ class RoleController extends Controller
         unset($request["role_id"]);
 
         foreach ($request as $key => $value) {
-            $permission = \processdrive\rap\Models\Permission::whereAction(str_replace("_", ".", $key) )->first();
+            $permission = \processdrive\rap\app\Models\Permission::whereAction(str_replace("_", ".", $key) )->first();
             if ($value)
             $role->permissions()->attach($permission);
             else if (@$permission)

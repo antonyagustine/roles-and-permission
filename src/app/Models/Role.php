@@ -1,8 +1,8 @@
 <?php
 
-namespace processdrive\rap\Models;
+namespace processdrive\rap\app\Models;
 
-use processdrive\rap\Helpers\RAPHelper;
+use \processdrive\rap\app\Helpers\RAPHelper;
 
 
 class Role extends Model
@@ -83,7 +83,7 @@ class Role extends Model
      * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
      */
     public function users() {
-        return $this->belongsToMany("processdrive\\rap\Models\users", "user_role", "role_id", "user_id" );
+        return $this->belongsToMany("processdrive\\rap\app\Models\users", "user_role", "role_id", "user_id" );
     }
 
     /**
@@ -91,7 +91,7 @@ class Role extends Model
      * @return \Illuminate\Database\Eloquent\Relations\belongsToMany
      */
     public function permissions() {
-        return $this->belongsToMany("processdrive\\rap\Models\Permission", "role_permission", "role_id", "permission_id");
+        return $this->belongsToMany("processdrive\\rap\app\Models\Permission", "role_permission", "role_id", "permission_id");
     }
 
     /**
@@ -100,7 +100,7 @@ class Role extends Model
      * @return boolean
      */
     public function hasPermission ($action) {
-        return $this->belongsToMany("processdrive\\rap\Models\Permission","role_permission", "role_id", "permission_id")->whereAction($action)->first();
+        return $this->belongsToMany("processdrive\\rap\app\Models\Permission","role_permission", "role_id", "permission_id")->whereAction($action)->first();
     }
 
     /**

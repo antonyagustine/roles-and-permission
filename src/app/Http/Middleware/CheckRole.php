@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Middleware;
+namespace processdrive\rap\app\Http\Middleware;
 
 use Closure;
 

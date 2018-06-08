@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Helpers;
+namespace processdrive\rap\app\Helpers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Config;

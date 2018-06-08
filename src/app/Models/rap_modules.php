@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Models;
+namespace processdrive\rap\app\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,6 +15,6 @@ class rap_modules extends Model
      * @return [type]
      */
     public function permission() {
-        return $this->hasMany("processdrive\\rap\Models\Permission", "module_id", "id");
+        return $this->hasMany("processdrive\\rap\app\Models\Permission", "module_id", "id");
     }
 }

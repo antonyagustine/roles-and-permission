@@ -1,8 +1,8 @@
 <?php
 
-namespace processdrive\rap\Models;
+namespace processdrive\rap\app\Models;
 
-use processdrive\rap\Helpers\RAPHelper;
+use \processdrive\rap\app\Helpers\RAPHelper;
 
 class GetRoutes extends Model
 {
@@ -87,8 +87,8 @@ class GetRoutes extends Model
      * @return [void]
      */
     public function writeIntoPermissionTable()  {
-        $permission = new \processdrive\rap\Models\Permission();
-        $modules = new \processdrive\rap\Models\rap_modules();
+        $permission = new \processdrive\rap\app\Models\Permission();
+        $modules = new \processdrive\rap\app\Models\rap_modules();
         $route_array = $this->getDataForPermissionTableSeeding();
         $pre_module = "";
 
@@ -124,7 +124,7 @@ class GetRoutes extends Model
      * @return [void]
      */
     public function getDataForPermissionTableSeeding() {
-        $obj = new \processdrive\rap\Models\GetRoutes();
+        $obj = new \processdrive\rap\app\Models\GetRoutes();
         $route = $obj->getRouteAndModel('route');
         $module_trans_arrray = [];
 
