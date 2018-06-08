@@ -39,7 +39,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        $roles = $this->roleModel->pluck('name', 'id')->toArray();
+        $roles = $this->roleModel->where('deleted_at', null)->pluck('name', 'id')->toArray();
         return view('rap::roles.create_or_edit', compact('roles'));
     }
 
