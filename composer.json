@@ -2,6 +2,15 @@
     "name": "processdrive/rap",
     "description": "Laravel roles and permission simple package",
     "license": "MIT",
+    "keywords": [
+        "Laravel", 
+        "roles and permission", 
+        "roles", 
+        "permission", 
+        "laravel roles and permission", 
+        "laravel acl",
+        "laravel RAP"
+    ],
     "authors": [
         {
             "name": "Agustine",

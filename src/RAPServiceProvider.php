@@ -28,7 +28,8 @@ class RAPServiceProvider extends ServiceProvider
         });
 
         if (Config::get('rap.rap_config.use_package_routes')) {
-            $this->loadRoutesFrom(__DIR__.'/routes.php');
+            require __DIR__.'/routes.php';
+            // $this->loadRoutesFrom(__DIR__.'/routes.php');
         }
 
         $this->loadViewsFrom(__DIR__.'/views', 'rap');
