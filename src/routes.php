@@ -3,7 +3,7 @@
 $middleware = \Config::get('rap.rap_config.middlewares');
 
 $prefix = 'processdrive/rap';
-$namespace = '\processdrive\rap\Controllers';
+$namespace = 'processdrive\rap\Http\Controllers';
 
 // make sure authenticated
 Route::group(compact('middleware', 'prefix', 'namespace'), function () {

@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Commands;
+namespace processdrive\rap\app\Commands;
 
 use Illuminate\Console\Command;
 

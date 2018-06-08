@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Controllers;
+namespace processdrive\rap\Http\Controllers;
 
 use processdrive\rap\Models\Permission;
 use \App\Http\Controllers\Controller;

@@ -9,7 +9,7 @@ class RAPServiceProvider extends ServiceProvider
 {
 
     protected $commands = [
-        'processdrive\rap\Commands\GenerateTranslation',
+        'processdrive\rap\app\Commands\GenerateTranslation',
     ];
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace processdrive\rap\Controllers;
+namespace processdrive\rap\Http\Controllers;
 
 use \App\Http\Controllers\AppBaseController;
 use processdrive\rap\Helpers\RAPHelper;
