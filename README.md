@@ -34,6 +34,26 @@ Set configuration in `config/app.php`
 ],
 ```
 
+Set relationship in `app/User.php`
+
+```
+/**
+ * @return @return \Illuminate\Database\Eloquent\Relations\belongsToMany
+ */
+public function roles() {
+    return $this->belongsToMany("App\Models\Role","user_role", "user_id", "role_id");
+}
+
+/**
+ * [hasPermission]
+ * @param  [str]  $permission
+ * @return boolean
+ */
+public function hasPermission($permission) {
+    return $this->roles()->get()[0]->hasPermission($permission);
+}
+```
+
 ## Publish the package
 
 ```
