@@ -35,7 +35,7 @@
                             @foreach ($data as $value)
                                 <tr>
                                     <td>@include('rap::rap_modules.datatables_edit_action', ['id' => $value->id])</td>
-                                    <td>{!! $value->action !!}</td>
+                                    <td>{!! str_replace('.', ' ', $value->action)  !!}</td>
                                 </tr>
                             @endforeach
                         @endif
@@ -52,10 +52,25 @@
 
 @section('js')
 	<script type="text/javascript">
+        var st = true;
 		var save_action_url = '{{ url('processdrive/rap/rapModules/save/actions') }}';
 		var edit_action_url = '{{ url('processdrive/rap/rapModules/edit/actions') }}';
         var delete_action_url = '{{ url('processdrive/rap/rapModules/delete/actions') }}';
 		var render_action_url = '{{ url('processdrive/rap/rapModules/render/actions/'.@$module_id) }}';
 		var module_id = '{!! @$module_id !!}';
+        
+        $(window).keypress(function (e) {
+            if (e.key === ' ' || e.key === 'Spacebar') {
+                // ' ' is standard, 'Spacebar' was used by IE9 and Firefox < 37
+                if(st)
+                alert('Space is not alowed.');
+
+                st = false;
+                setTimeout(function() {
+                    $('#action').val($('#action').val().replace(" ", "."));
+                }, 100);
+                
+            }
+        });
 	</script>
 @endsection

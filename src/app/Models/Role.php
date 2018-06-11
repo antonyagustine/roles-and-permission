@@ -136,11 +136,17 @@ class Role extends Model
                     $checked = ($role->hasPermission($action_value)) ? "checked" : "";
 
                     if ($action_key !== 'module_name' && !empty(end($action))) {
+                    
                         if (@$this->action_array['static_actions'][end($action)])
                         $trans = trans('rap_actions.'.end($action));
                         else
                         $trans = trans('rap_actions.'.$action_value);
+
                         $trans = ($actions['module_name']->id > 1000) ? $action_value: $trans;
+
+                        if($action_key >= '2001')
+                        $trans = str_replace('.', ' ', $action_value);
+
                         echo '<tr> <td><label>'.$trans.'</label></td> <td> <input type="checkbox" '.$checked.' name="'.$action_value.'" class="permission '.$i.'"> </td> </tr>';
                     }
                 }
