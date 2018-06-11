@@ -1,8 +1,6 @@
-<p align="center"><img src="https://www.google.com/a/processdrive.com/images/logo.gif?alpha=1&service=google_default"></p>
+![Latest Stable Version](https://www.google.com/a/processdrive.com/images/logo.gif?alpha=1&service=google_default)
 
-<p align="center">
-    ![Latest Stable Version](https://poser.pugx.org/laravel/laravel/v/stable) [![Latest Unstable Version](https://poser.pugx.org/laravel/laravel/v/unstable)](https://packagist.org/packages/laravel/laravel) [![License](https://poser.pugx.org/laravel/laravel/license)](https://packagist.org/packages/laravel/laravel)
-</p>
+![Latest Stable Version](https://poser.pugx.org/laravel/laravel/v/stable) [![Latest Unstable Version](https://poser.pugx.org/laravel/laravel/v/unstable)](https://packagist.org/packages/laravel/laravel) [![License](https://poser.pugx.org/laravel/laravel/license)](https://packagist.org/packages/laravel/laravel)
 
 
 # Roles And Permission (RAP)
@@ -159,5 +157,3 @@ protected $routeMiddleware = [
     // your code
 @endHasPermission
 ```
-
-    
