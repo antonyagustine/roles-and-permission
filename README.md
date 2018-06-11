@@ -104,13 +104,13 @@ composer dump-autoload
 php artisan migrate
 ```
 
-## Generate translation and db seed
+## Generate translation and DB seed
 
 ```
 php artisan rap_generate:translation
 ```
 
-Edit translation files
+##Edit translation files
 ```
 resources/lang/en/rap_actions.php
 resources/lang/en/rap_modules.php
