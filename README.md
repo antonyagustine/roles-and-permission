@@ -1,7 +1,7 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
-[![Latest Stable Version](https://poser.pugx.org/laravel/laravel/v/stable)](https://packagist.org/packages/laravel/laravel)
+![Latest Stable Version](https://poser.pugx.org/laravel/laravel/v/stable)(https://packagist.org/packages/laravel/laravel)
 [![Latest Unstable Version](https://poser.pugx.org/laravel/laravel/v/unstable)](https://packagist.org/packages/laravel/laravel)
 [![License](https://poser.pugx.org/laravel/laravel/license)](https://packagist.org/packages/laravel/laravel)
 </p>
