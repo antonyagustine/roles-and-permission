@@ -1,5 +1,5 @@
 <p align="center">
-  <img class="gb_1a" src="https://www.google.com/a/processdrive.com/images/logo.gif?alpha=1&amp;service=google_default" style="max-width:144px;max-height:60px">
+  <img class="gb_1a" src="https://www.google.com/a/processdrive.com/images/logo.gif?alpha=1&amp;service=google_default" style="max-width:15% ;max-height:60px">
 </p>
 
 ![Latest Stable Version](https://poser.pugx.org/laravel/laravel/v/stable) [![Latest Unstable Version](https://poser.pugx.org/laravel/laravel/v/unstable)](https://packagist.org/packages/laravel/laravel) [![License](https://poser.pugx.org/laravel/laravel/license)](https://packagist.org/packages/laravel/laravel)
