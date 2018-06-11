@@ -110,6 +110,12 @@ php artisan migrate
 php artisan rap_generate:translation
 ```
 
+Edit translation files
+```
+resources/lang/en/rap_actions.php
+resources/lang/en/rap_modules.php
+```
+
 ## Add Route
 
 Add Route in `routes/web.php`
