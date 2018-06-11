@@ -1,5 +1,5 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/antony382/roles-and-permission/master/public/images/logo.gif" style="max-width:15% !important;max-height:60px !important">
+<p align="center" style="max-width:20%"">
+  <img src="https://raw.githubusercontent.com/antony382/roles-and-permission/master/public/images/logo.gif" style="max-width:20% !important;max-height:60px !important">
 </p>
 
 ![Latest Stable Version](https://poser.pugx.org/laravel/laravel/v/stable) [![Latest Unstable Version](https://poser.pugx.org/laravel/laravel/v/unstable)](https://packagist.org/packages/laravel/laravel) [![License](https://poser.pugx.org/laravel/laravel/license)](https://packagist.org/packages/laravel/laravel)
